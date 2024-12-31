@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/coupons")
+    @RequestMapping("/api/coupons")
 public class CouponController {
 
     @Autowired
@@ -26,7 +26,7 @@ public class CouponController {
         return ResponseEntity.ok(couponService.lireTousLesCoupons());
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/getCoupon/{id}")
     public ResponseEntity<Coupon> lireCouponParId(@PathVariable Long id) {
         return couponService.lireCouponParId(id)
                 .map(ResponseEntity::ok)

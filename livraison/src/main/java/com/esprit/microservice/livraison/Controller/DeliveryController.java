@@ -2,9 +2,11 @@ package com.esprit.microservice.livraison.Controller;
 
 
 
+import com.esprit.microservice.livraison.Service.Coupon;
 import com.esprit.microservice.livraison.Service.DeliveryService;
 import com.esprit.microservice.livraison.entity.Delivery;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +18,8 @@ import java.util.List;
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*")
 public class DeliveryController {
-    private final DeliveryService deliveryService;
+    @Autowired
+    private  DeliveryService deliveryService;
 
     @PostMapping("/create")
     public ResponseEntity<Delivery> createDelivery(@RequestBody Delivery delivery) {
@@ -70,4 +73,10 @@ public class DeliveryController {
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime endDate) {
         return ResponseEntity.ok(deliveryService.getDeliveriesByDateRange(startDate, endDate));
     }
+    @GetMapping("/getCoupon/{id}")
+    public ResponseEntity<Coupon> getcoupon(@PathVariable Long id) {
+        return deliveryService.getcoupon(id);
+    }
+
+
 }

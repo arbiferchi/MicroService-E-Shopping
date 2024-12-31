@@ -1,0 +1,8 @@
+tn\esprit\Microservices\services\IProduitService.class
+tn\esprit\Microservices\controllers\ProduitController.class
+tn\esprit\Microservices\entities\Produit.class
+tn\esprit\Microservices\repositories\ProduitRepository.class
+tn\esprit\Microservices\Produit_MicroservicesApplication.class
+tn\esprit\Microservices\services\CouponClient.class
+tn\esprit\Microservices\services\Coupon.class
+tn\esprit\Microservices\services\ProduitServiceImp.class

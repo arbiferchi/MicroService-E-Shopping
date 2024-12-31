@@ -24,6 +24,9 @@ public class ApiGatwayApplication {
                         .uri("http://livraison-service:8089"))
                 .route("reclamation",r->r.path("/api/reclamation/**")
                         .uri("http://reclamation:8075"))
+
+                .route("Produits",r->r.path("/api/produit/**")
+                        .uri("http://product:8078"))
                 .build();
     }
 

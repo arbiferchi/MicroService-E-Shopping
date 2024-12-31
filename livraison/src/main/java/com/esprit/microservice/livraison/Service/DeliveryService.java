@@ -4,16 +4,22 @@ import com.esprit.microservice.livraison.Repository.DeliveryRepository;
 import com.esprit.microservice.livraison.entity.Delivery;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 @Transactional
 public class DeliveryService {
-    private final DeliveryRepository deliveryRepository;
+
+    @Autowired
+    private  CouponClient couponClient;
+
+    @Autowired
+    private  DeliveryRepository deliveryRepository;
 
     public Delivery createDelivery(Delivery delivery) {
         return deliveryRepository.save(delivery);
@@ -56,4 +62,9 @@ public class DeliveryService {
     public List<Delivery> getDeliveriesByDateRange(LocalDateTime startDate, LocalDateTime endDate) {
         return deliveryRepository.findByCreatedAtBetween(startDate, endDate);
     }
+
+    public ResponseEntity<Coupon> getcoupon(Long id) {
+        return couponClient.lireCouponParId(id);
+    }
+
 }

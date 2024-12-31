@@ -18,7 +18,7 @@ public class ReclamationController  {
 
 
 
-    @PostMapping("/addReclamation")
+        @PostMapping("/addReclamation")
     public Reclamation addReclamation(
             @RequestBody Reclamation r){
         return iReclamationService.addReclamation(r);

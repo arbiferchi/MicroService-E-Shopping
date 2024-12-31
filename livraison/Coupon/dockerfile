@@ -1,0 +1,4 @@
+FROM openjdk:17
+EXPOSE 8081
+ADD target/couponGestion-0.0.1-SNAPSHOT.jar coupon.jar
+ENTRYPOINT ["java","-jar","coupon.jar"]

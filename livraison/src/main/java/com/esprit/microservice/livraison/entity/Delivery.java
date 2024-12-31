@@ -24,6 +24,7 @@ public class Delivery {
     private LocalDateTime estimatedDeliveryTime;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+    private Long couponId;
 
     @PrePersist
     protected void onCreate() {

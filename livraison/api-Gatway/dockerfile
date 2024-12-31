@@ -1,0 +1,7 @@
+FROM openjdk:17
+
+EXPOSE 8009
+
+ADD target/api-Gatway-0.0.1-SNAPSHOT.jar gatway.jar
+
+ENTRYPOINT ["java", "-jar", "gatway.jar"]

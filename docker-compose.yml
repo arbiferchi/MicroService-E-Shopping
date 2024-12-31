@@ -10,35 +10,7 @@ services:
     depends_on:
       - eureka-server
 
-  keycloak-mysql:
-    container_name: keycloak-mysql
-    image: mysql:5.7
-    volumes:
-      - ./mysql_keycloak_data:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: keycloak
-      MYSQL_USER: keycloak
-      MYSQL_PASSWORD: password
-
-  keycloak:
-    container_name: keycloak
-    image: quay.io/keycloak/keycloak:18.0.0
-    command: [ "start-dev", "--import-realm" ]
-    environment:
-      DB_VENDOR: MYSQL
-      DB_ADDR: mysql
-      DB_DATABASE: keycloak
-      DB_USER: keycloak
-      DB_PASSWORD: password
-      KEYCLOAK_ADMIN: admin
-      KEYCLOAK_ADMIN_PASSWORD: admin
-    ports:
-      - "8080:8080"
-    volumes:
-      - ./realms/:/opt/keycloak/data/import/
-    depends_on:
-      - keycloak-mysql
+  
 
   mysqldb:
     image: mysql:5.7
@@ -80,7 +52,32 @@ services:
     stdin_open: true
     tty: true
 
+  product:
+    image: arbiferchichi/product
+    container_name: produit
 
+    depends_on:
+      - mysqldb
+      - eureka-server
+      
+    build: ./Produits
+    restart: on-failure
+    ports:
+      - 8078:8078
+    environment:
+      SPRING_APPLICATION_JSON: '{
+        "spring.datasource.url"  : "jdbc:mysql://mysqldb:3306/product?createDatabaseIfNotExist=true&useSSL=false",
+        "spring.datasource.username" : "root",
+        "spring.datasource.password" : "root",
+        "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQLDialect",
+        "spring.jpa.hibernate.ddl-auto" : "update"
+      }'
+
+
+    volumes:
+      - .m2:/root/.m2
+    stdin_open: true
+    tty: true
 
   reclamation:
     image: anisfarjallah/reclamation
@@ -123,15 +120,39 @@ services:
     image: arbiferchichi/apigateway
     container_name: apigateway
     ports:
-      - "8009:8009"
+      - "8007:8007"
     environment:
-     
+   
 
       EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE: http://eureka-server:8761/eureka/
     depends_on:
       - eureka-server
       - livraison
-      - keycloak
+  
+
+  angular:
+    build: ./light-bootstrap-dashboard-angular2-master  # Path to your Angular app's Dockerfile
+    image: arbiferchichi/angular-app  # You can change this to a more descriptive image name
+    container_name: angular-service
+    ports:
+      - "4200:4200"  # Map the container's internal port 80 to host port 4200 (default Angular port)
+    environment:
+
+      - NODE_ENV=production  # Set the environment to production or any other variables you need
+      - API_URL=http://api-gateway:8007  # Adjust to point to your API gateway or backend service
+      - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://eureka-server:8761/eureka/  # Eureka server URL
+    depends_on:
+      - eureka-server  # Ensure eureka-server is available before starting the Angular app
+      - api-gateway 
+      - livraison
+     # Map the Angular build directory to Nginx server
+    restart: unless-stopped  # You can change restart policy if necessary
+    stdin_open: true
+    tty: true 
+
+
 
 volumes:
   db:
+
+ 

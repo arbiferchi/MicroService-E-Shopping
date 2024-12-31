@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="77e531b3-bd7d-4081-83a3-016fa6054080" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Coupon/Database/Data/coupon.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../Coupon/Database/Data/coupon.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Coupon/src/main/java/com/example/coupongestion/controller/CouponController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Coupon/src/main/java/com/example/coupongestion/controller/CouponController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Coupon/src/main/java/com/example/coupongestion/repository/CouponRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Coupon/src/main/java/com/example/coupongestion/repository/CouponRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-Gatway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-Gatway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-Gatway/src/main/java/com/example/apigatway/ApiGatwayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api-Gatway/src/main/java/com/example/apigatway/ApiGatwayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-Gatway/src/main/java/config/ApiGatewaySecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-Gatway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../api-Gatway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livraison/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../livraison/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livraison/src/main/java/com/esprit/microservice/livraison/Controller/DeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../livraison/src/main/java/com/esprit/microservice/livraison/Controller/DeliveryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livraison/src/main/java/com/esprit/microservice/livraison/LivraisonApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../livraison/src/main/java/com/esprit/microservice/livraison/LivraisonApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livraison/src/main/java/com/esprit/microservice/livraison/Service/DeliveryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../livraison/src/main/java/com/esprit/microservice/livraison/Service/DeliveryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livraison/src/main/java/com/esprit/microservice/livraison/entity/Delivery.java" beforeDir="false" afterPath="$PROJECT_DIR$/../livraison/src/main/java/com/esprit/microservice/livraison/entity/Delivery.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2olsVHJs0JfFkeKIyfvaKG0aq3B" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.Microservices_Rami [clean].executor": "Run",
+    "Maven.Microservices_Rami [install].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "arbi",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ADMIN/OneDrive - ESPRIT/Bureau/microservice version omar/microService-omar/Produits/src/main/java/tn/esprit/Microservices/services",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "e328ffb5fdbcc2a9f8f99a769a902461",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\OneDrive - ESPRIT\Bureau\microservice version omar\microService-omar\Produits\src\main\java\tn\esprit\Microservices\services" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Produit_MicroservicesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Microservices_Rami" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.Microservices.Produit_MicroservicesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="77e531b3-bd7d-4081-83a3-016fa6054080" name="Changes" comment="" />
+      <created>1731455519938</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731455519938</updated>
+      <workItem from="1731455521230" duration="2055000" />
+      <workItem from="1731468731711" duration="511000" />
+      <workItem from="1731473057084" duration="7760000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
